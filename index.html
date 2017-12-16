@@ -1,0 +1,108 @@
+
+<!--
+Coding by Lewis.aedes@gmail.com, lewisflybug@gmail.com
+
+別偷看這啦！好害羞喔！
+-->
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>祝各位，聖誕快樂！ : )</title>
+
+    <meta property="og:type"        content="article" />
+    <meta property="og:title"       content="LJ Media: 2017 聖誕快樂！" />
+    <meta property="og:description" content="謝謝各為 2017 年的各種支持與照顧，我們明年繼續一起努力！：D Lets get Happy! " />
+    <meta property="og:locale"      content="zh_TW" />
+    <meta property="og:image"       content="./preview.png" />
+    </head>
+    <style type="text/css">
+        *
+        {
+            padding: 0;
+            margin: 0;
+            max-width: 100%;
+            max-height: 100%;
+
+            background: #000;
+        }
+
+        #nameDisplay
+        {
+            position: absolute;
+            text-align: center;
+
+            color: #fff;
+            top: 18%;
+            left: 0;
+            right: 0;
+            font-size: 3em;
+
+            background: transparent;
+        }
+
+
+        @media (min-width: 400px) {
+            #nameDisplay
+            {
+                top: 5%;
+                font-size: 2em;
+            }
+        }
+        @media (min-width: 700px) {
+            #nameDisplay
+            {
+                top: 9%;
+                font-size: 2.5em;
+            }
+        }
+        @media (min-width: 900px) {
+            #nameDisplay
+            {
+                top: 11%;
+                font-size: 3em;
+            }
+        }
+        @media (min-width: 1200px) {
+            #nameDisplay
+            {
+                top: 16%;
+                font-size: 3em;
+            }
+        }
+
+    </style>
+<body>
+<!-- background -->
+<!-- controls="false" is not allowed -->
+<video autoplay="true" loop="true" width="100%" height="100%">
+    <source src="./main.mp4" type="video/mp4">
+</video>
+
+<div id="nameDisplay">
+</div>
+
+<!-- init name script -->
+<script type="text/javascript">
+
+function ljXmax () {
+    this.getUrlDisplayName = function () {
+        var urlParameter = location.search.replace("?", "");
+        var urlParameter = decodeURIComponent(urlParameter);
+
+        if (urlParameter == "")
+        {
+            urlParameter = "大家";
+        }
+
+        return urlParameter;
+    };
+};
+
+window.xmax = new ljXmax();
+
+var dom = document.getElementById("nameDisplay");
+dom.innerHTML = window.xmax.getUrlDisplayName();
+
+</script>
+</body>
